@@ -57,8 +57,9 @@ Build in this order. Each project adds one “new skill layer” she can name in
 
 ### 03 — SpendWise
 
+**Status:** **MVP complete** — https://github.com/harshitha22102008/spendwise (`dc70624`). Local demo; no hosted app URL yet.  
 **Role:** Personal finance tracker + visualization + CSV.  
-**MVP:** Auth → categories → add expenses/income → monthly summary chart → **export CSV** + **import CSV** (same columns).  
+**MVP:** Auth → categories → add expenses/income → monthly summary chart → **export CSV** + **import CSV** (same columns) + seed data.  
 **New skills:** Aggregations, file parse/export, clearer data modeling.  
 **Cut → Future:** Bank APIs, receipt OCR, budgets with alerts, multi-currency.
 

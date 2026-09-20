@@ -91,7 +91,7 @@ Other repos may link back: “See portfolio `docs/program` for stack and design 
 |---|---|
 | `harshitha-portfolio` | Public repo live; portfolio hub |
 | `studyflow` | Public repo live; **MVP complete** (`8a6459c`) |
-| `spendwise` | Public repo live |
+| `spendwise` | Public repo live; **MVP complete** (`dc70624`) |
 | `campushub` | Public repo live |
 | `skillswap` | Public repo live |
 | `codequest` | Public repo live |
