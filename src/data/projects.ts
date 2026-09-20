@@ -5,14 +5,14 @@ export type Project = {
   narrative: string
   name: string
   oneLiner: string
-  /** Sibling repo placeholder — update with live URLs in Wave 2 */
+  /** Live sibling GitHub repo URL */
   url: string
   status: 'hub' | 'planned'
 }
 
 /**
  * Progression 01–07 per docs/program/PLAN.md.
- * Links point at sibling GitHub repos (placeholders until live).
+ * Links point at live sibling GitHub repos under harshitha22102008.
  */
 export const PROJECTS: Project[] = [
   {
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     narrative: 'First full-stack CRUD + JWT + charts',
     name: 'StudyFlow',
     oneLiner: 'Track study sessions and see hours with simple charts.',
-    url: 'https://github.com/example/studyflow',
+    url: 'https://github.com/harshitha22102008/studyflow',
     status: 'planned',
   },
   {
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Aggregations, CSV import/export',
     name: 'SpendWise',
     oneLiner: 'Log expenses, chart months, import/export CSV.',
-    url: 'https://github.com/example/spendwise',
+    url: 'https://github.com/harshitha22102008/spendwise',
     status: 'planned',
   },
   {
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Roles, relationships, protected routes',
     name: 'CampusHub',
     oneLiner: 'Clubs and campus events with login and roles.',
-    url: 'https://github.com/example/campushub',
+    url: 'https://github.com/harshitha22102008/campushub',
     status: 'planned',
   },
   {
@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Request workflow (pending → accept/decline)',
     name: 'SkillSwap',
     oneLiner: 'Request and accept peer skill-teaching swaps.',
-    url: 'https://github.com/example/skillswap',
+    url: 'https://github.com/harshitha22102008/skillswap',
     status: 'planned',
   },
   {
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Seed data, scoring rules, progress',
     name: 'CodeQuest',
     oneLiner: 'Gamified quiz practice with XP and progress.',
-    url: 'https://github.com/example/codequest',
+    url: 'https://github.com/harshitha22102008/codequest',
     status: 'planned',
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Dashboard + explainable rule-based tips',
     name: 'CampusPulse',
     oneLiner: 'Campus dashboard with explainable rule-based tips.',
-    url: 'https://github.com/example/campuspulse',
+    url: 'https://github.com/harshitha22102008/campuspulse',
     status: 'planned',
   },
 ]
