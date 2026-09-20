@@ -2,9 +2,11 @@
 
 **Goal:** Simple, professional, neat UI across **all** projects. One visual language so the portfolio feels intentional, not seven random themes.
 
+**Canonical implementation:** `harshitha-portfolio/src/styles/tokens.css` (copy into sibling apps).
+
 **Principles**
 
-1. Light-first (dark is optional toggle, not the default look).  
+1. Light-first (dark is optional via `html.dark`, not the default look).  
 2. One composition per section; avoid dashboard clutter on marketing/hero pages.  
 3. No purple-on-white / indigo-glow “AI startup” look.  
 4. No warm cream + terracotta + display-serif cliché.  
@@ -17,100 +19,101 @@
 
 - Primary name lockup: **Harshitha** (wordmark in display font).  
 - On the portfolio hero, the name is the strongest text signal; the tagline is secondary.  
-- Accent color used sparingly: links, primary buttons, focus rings, chart highlight series.
+- Accent used sparingly: links, primary buttons, focus rings, chart highlight series.
 
 ---
 
 ## Color tokens (CSS variables)
 
-Light theme is default. Copy these into each app’s global CSS (e.g. `src/index.css`).
+Light theme is default. Prefer the `--color-*` names already used in the portfolio scaffold.
 
 ```css
 :root {
-  /* Surfaces */
-  --bg: #f4f7fb;           /* cool mist — not cream */
-  --bg-elevated: #ffffff;
-  --bg-muted: #e8eef6;
+  /* Surfaces — cool sage mist (not cream) */
+  --color-bg: #f4f7f5;
+  --color-surface: #ffffff;
+  --bg-muted: #e8efe9;          /* optional secondary wash */
 
   /* Text */
-  --ink: #142033;          /* deep navy-ink */
-  --ink-muted: #5a6b82;
-  --ink-faint: #8b9bb0;
+  --color-ink: #14201c;
+  --color-muted: #5a6b64;
+  --ink-faint: #8b9b94;
 
-  /* Accent — teal (professional, not purple) */
-  --accent: #0f766e;
-  --accent-hover: #0d9488;
-  --accent-soft: #ccfbf1;
+  /* Accent — forest teal (not purple) */
+  --color-accent: #1a6b58;
+  --color-accent-hover: #145546;
+  --color-accent-soft: #dceee8;
 
   /* Semantic */
-  --border: #d5dee9;
+  --color-border: #d5e0db;
+  --color-footer: #0f1a16;
   --danger: #b91c1c;
   --success: #047857;
   --warning: #b45309;
 
-  /* Charts (keep restrained) */
-  --chart-1: #0f766e;
+  /* Charts (restrained) */
+  --chart-1: #1a6b58;
   --chart-2: #1d4ed8;
   --chart-3: #0369a1;
   --chart-4: #4b5563;
 
-  /* Radii & shadow */
-  --radius: 10px;
+  --radius: 0.5rem;
   --radius-sm: 6px;
-  --shadow: 0 1px 2px rgb(20 32 51 / 0.06), 0 8px 24px rgb(20 32 51 / 0.06);
+  --shadow-soft: 0 1px 2px rgb(20 32 28 / 0.04), 0 8px 24px rgb(20 32 28 / 0.06);
+  --ring: 0 0 0 3px rgb(26 107 88 / 0.35);
 
-  /* Focus */
-  --ring: 0 0 0 3px rgb(15 118 110 / 0.35);
+  --bg-atmosphere:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #dceee8 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #e8efe9 0%, transparent 50%),
+    linear-gradient(180deg, #f4f7f5 0%, #eef2f0 100%);
 }
 
 /* Optional dark — user preference only */
-[data-theme="dark"] {
-  --bg: #0c1220;
-  --bg-elevated: #151d2e;
-  --bg-muted: #1c263a;
-  --ink: #e8eef6;
-  --ink-muted: #9aabbf;
-  --ink-faint: #6b7c92;
-  --accent: #2dd4bf;
-  --accent-hover: #5eead4;
-  --accent-soft: #134e4a;
-  --border: #2a3548;
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.35);
+html.dark {
+  --color-bg: #0f1614;
+  --color-surface: #1a2420;
+  --color-ink: #e8eeeb;
+  --color-muted: #9aaba3;
+  --color-accent: #3dba9a;
+  --color-accent-hover: #5ecfb0;
+  --color-accent-soft: #1a332c;
+  --color-border: #2a3a34;
+  --color-footer: #0a100e;
 }
 ```
 
-**Tailwind mapping tip:** extend `theme.colors` to these names (`ink`, `accent`, etc.) or use arbitrary values `bg-[var(--bg)]`. Prefer variables so light/dark stay consistent.
+**Tailwind:** bridge via `@theme inline` (see portfolio `tokens.css`) so utilities like `bg-surface`, `text-ink`, `font-display` work.
 
 ---
 
 ## Typography
 
-**Do not use:** Inter, Roboto, Arial, system-ui as the intentional brand pair (system fallbacks in the stack are fine).
+**Do not use as brand fonts:** Inter, Roboto, Arial (system fallbacks in the stack are fine).
 
 | Role | Font | Why |
 |---|---|---|
-| Display / name / page titles | [Fraunces](https://fonts.google.com/specimen/Fraunces) | Soft contrast serif — expressive but calm |
-| Body / UI | [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3) | Readable, professional, distinct from Inter |
+| Display / name / page titles | [Fraunces](https://fonts.google.com/specimen/Fraunces) | Soft optical-size serif — expressive but calm |
+| Body / UI | [Figtree](https://fonts.google.com/specimen/Figtree) | Clean geometric sans; distinct from Inter |
 
 ```css
 :root {
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-body: "Figtree", "Segoe UI", sans-serif;
 }
 
 h1, h2, h3, .font-display {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: var(--color-ink);
 }
 
 body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--ink);
-  background: var(--bg);
+  color: var(--color-ink);
+  background: var(--color-bg);
 }
 ```
 
@@ -127,7 +130,7 @@ body {
 | `--text-3xl` | 2.25rem | Page titles |
 | `--text-hero` | clamp(2.25rem, 5vw, 3.25rem) | Portfolio name / hero |
 
-Max content width for reading: **42rem**. App shells (dashboards): **72rem** centered with side padding.
+Max content width for reading: **42rem**. App shells: **~68rem** (`--max-w`) centered with side padding.
 
 ---
 
@@ -147,8 +150,7 @@ Use an 8px rhythm.
 | `--space-8` | 64px |
 
 Section vertical padding: `--space-7` mobile, `--space-8` desktop.  
-Form field gap: `--space-4`.  
-Stack of related controls: `--space-3`.
+Form field gap: `--space-4`.
 
 ---
 
@@ -156,33 +158,34 @@ Stack of related controls: `--space-3`.
 
 ### Buttons
 
-- **Primary:** `background: var(--accent); color: white;` hover → `--accent-hover`.  
-- **Secondary:** white/elevated bg, `border: 1px solid var(--border)`, ink text.  
-- **Danger:** use `--danger` for destructive only.  
+- **Primary:** `background: var(--color-accent); color: white;` hover → `--color-accent-hover`.  
+- **Secondary:** surface bg, `border: 1px solid var(--color-border)`, ink text.  
+- **Danger:** `--danger` for destructive only.  
 - Height ~40px; padding `0 16px`; radius `--radius-sm`.  
 - Never pill-shaped (`rounded-full`) for primary actions — slight radius only.
 
 ### Inputs
 
-- Light border `--border`, focus uses `--ring`.  
+- Border `--color-border`; focus uses `--ring`.  
 - Labels above fields (not placeholder-only).  
 - Error text in `--danger` under the field.
 
 ### Cards
 
-- Allowed for: project tiles, club/event rows that are clickable, metric summary that is tappable.  
-- Style: `--bg-elevated`, 1px `--border`, optional soft `--shadow`, radius `--radius`.  
+- Allowed for: project tiles, club/event rows that are clickable, tappable metric summaries.  
+- Style: `--color-surface`, 1px border, optional `--shadow-soft`, `--radius`.  
 - If removing border/shadow/bg does not hurt understanding, **do not use a card**.
 
 ### Navigation
 
-- Simple top bar: name left, links right. Mobile: hamburger or stacked links — keep it boring and clear.  
-- Active link: accent underline or accent text — not neon glow.
+- Simple top bar: name left, links right. Mobile: clear menu — boring is good.  
+- Active link: accent underline or accent text — not neon glow.  
+- Nav height reference: `--nav-h: 4rem`.
 
 ### Tables & lists
 
 - Prefer clean tables/lists for SpendWise and StudyFlow logs.  
-- Zebra optional via `--bg-muted` at very low contrast.
+- Optional zebra via a soft muted wash.
 
 ### Charts
 
@@ -191,13 +194,13 @@ Stack of related controls: `--space-3`.
 
 ### Empty states
 
-- One short sentence + one primary CTA (“Add your first expense”). No illustrations required.
+- One short sentence + one primary CTA. No illustrations required.
 
 ### Motion (2–3 intentional uses max per app)
 
 1. Page/section fade-in on load (150–250ms opacity).  
 2. Button hover / press (color + slight translateY).  
-3. Optional: chart draw or list stagger on dashboard — **subtle**.  
+3. Optional subtle chart/list entrance — not noise.  
 
 Avoid continuous glow pulses, parallax, and particle backgrounds.
 
@@ -207,21 +210,19 @@ Avoid continuous glow pulses, parallax, and particle backgrounds.
 
 | Surface | Pattern |
 |---|---|
-| Portfolio landing | Full-bleed soft gradient or subtle geometric background on hero; name + one line + CTA; projects below the fold |
-| App auth | Centered form on `--bg`, elevated panel |
-| App logged-in | Top nav + main content; optional simple sidebar only if 4+ destinations |
-
-Background atmosphere for portfolio: soft diagonal wash from `--bg` to `--bg-muted`, or a very light grid — not a stock photo collage unless she has a real photo of herself/campus.
+| Portfolio landing | Soft `--bg-atmosphere` on hero; name + one line + CTA; projects below the fold |
+| App auth | Centered form on `--color-bg`, elevated `--color-surface` panel |
+| App logged-in | Top nav + main; sidebar only if 4+ destinations |
 
 ---
 
 ## Accessibility checklist
 
 - Contrast: ink on bg meets WCAG AA.  
-- Focus visible on all interactive elements (`--ring`).  
+- Focus visible on all interactive elements.  
 - Buttons are `<button>`; links are `<a>`.  
-- Form errors announced with text, not color alone.  
-- Dark theme still readable; do not rely on opacity tricks.
+- Form errors use text, not color alone.  
+- Dark theme still readable.
 
 ---
 
@@ -238,4 +239,6 @@ Background atmosphere for portfolio: soft diagonal wash from `--bg` to `--bg-mut
 
 ## Implementation note
 
-Put tokens in each repo’s `src/styles/tokens.css` (or equivalent) and import once. Portfolio ships the canonical copy; other projects **copy** the same file rather than inventing a new palette.
+1. Treat portfolio `src/styles/tokens.css` as the source of truth.  
+2. Copy into each sibling app; do not invent a new palette per project.  
+3. Load Fraunces + Figtree from Google Fonts (or self-host later) in each app’s `index.html`.
