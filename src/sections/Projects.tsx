@@ -22,7 +22,11 @@ export function Projects() {
                   {project.progression}
                 </span>
                 <span className="text-xs font-medium uppercase tracking-wide text-[var(--ink-faint)]">
-                  {project.status === 'hub' ? 'This site' : 'Planned'}
+                  {project.status === 'hub'
+                    ? 'This site'
+                    : project.status === 'mvp'
+                      ? 'MVP complete'
+                      : 'Planned'}
                 </span>
               </div>
               <h3 className="mt-3 text-xl text-ink transition-colors group-hover:text-accent">

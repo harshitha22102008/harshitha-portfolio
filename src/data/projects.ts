@@ -7,7 +7,7 @@ export type Project = {
   oneLiner: string
   /** Live sibling GitHub repo URL */
   url: string
-  status: 'hub' | 'planned'
+  status: 'hub' | 'mvp' | 'planned'
 }
 
 /**
@@ -29,9 +29,10 @@ export const PROJECTS: Project[] = [
     progression: '02',
     narrative: 'First full-stack CRUD + JWT + charts',
     name: 'StudyFlow',
-    oneLiner: 'Track study sessions and see hours with simple charts.',
+    oneLiner:
+      'MVP: JWT auth, subjects, study sessions, hour charts, and seed data.',
     url: 'https://github.com/harshitha22102008/studyflow',
-    status: 'planned',
+    status: 'mvp',
   },
   {
     id: 'spendwise',
