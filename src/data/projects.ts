@@ -39,9 +39,10 @@ export const PROJECTS: Project[] = [
     progression: '03',
     narrative: 'Aggregations, CSV import/export',
     name: 'SpendWise',
-    oneLiner: 'Log expenses, chart months, import/export CSV.',
+    oneLiner:
+      'MVP: auth, categories, income/expense, monthly charts, CSV import/export, and seed.',
     url: 'https://github.com/harshitha22102008/spendwise',
-    status: 'planned',
+    status: 'mvp',
   },
   {
     id: 'campushub',
