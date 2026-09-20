@@ -41,19 +41,19 @@ Create these directories under the sibling root:
 
 ---
 
-## Suggested GitHub remote shape
+## Live GitHub remotes
+
+GitHub user: **harshitha22102008**
 
 ```text
-https://github.com/<her-username>/harshitha-portfolio
-https://github.com/<her-username>/studyflow
-https://github.com/<her-username>/spendwise
-https://github.com/<her-username>/campushub
-https://github.com/<her-username>/skillswap
-https://github.com/<her-username>/codequest
-https://github.com/<her-username>/campuspulse
+https://github.com/harshitha22102008/harshitha-portfolio
+https://github.com/harshitha22102008/studyflow
+https://github.com/harshitha22102008/spendwise
+https://github.com/harshitha22102008/campushub
+https://github.com/harshitha22102008/skillswap
+https://github.com/harshitha22102008/codequest
+https://github.com/harshitha22102008/campuspulse
 ```
-
-Replace `<her-username>` when her account is ready. Do not push until she asks.
 
 ---
 
@@ -85,9 +85,14 @@ Other repos may link back: “See portfolio `docs/program` for stack and design 
 
 ---
 
-## Status (as of program kickoff)
+## Status (live on GitHub)
 
 | Folder | Status |
 |---|---|
-| `harshitha-portfolio` | Exists; Vite/React scaffold on disk (commit separately from program docs) |
-| Others | Sibling folders created; scaffolds per QA — see each repo |
+| `harshitha-portfolio` | Public repo live; portfolio hub |
+| `studyflow` | Public repo live |
+| `spendwise` | Public repo live |
+| `campushub` | Public repo live |
+| `skillswap` | Public repo live |
+| `codequest` | Public repo live |
+| `campuspulse` | Public repo live |
