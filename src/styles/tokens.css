@@ -104,8 +104,8 @@ html.dark {
 }
 
 @theme inline {
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", "Segoe UI", sans-serif;
   --color-bg: var(--hp-bg);
   --color-surface: var(--hp-surface);
   --color-ink: var(--hp-ink);

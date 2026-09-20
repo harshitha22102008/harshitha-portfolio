@@ -4,9 +4,9 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border bg-footer text-[var(--hp-surface)]">
+    <footer className="border-t border-border bg-footer text-white">
       <div className="mx-auto flex max-w-[var(--max-w)] flex-col gap-4 px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p className="font-display text-lg font-semibold tracking-tight">
+        <p className="font-display text-lg font-semibold tracking-tight text-white">
           {SITE.name}
         </p>
         <div className="flex flex-wrap gap-5 text-sm text-white/70">
