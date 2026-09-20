@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     narrative: 'Layout, responsive UI, routing, deploy',
     name: 'Portfolio 2.0',
     oneLiner: 'Personal hub for my work, skills, and demos.',
-    url: 'https://github.com/example/harshitha-portfolio',
+    url: 'https://github.com/harshitha22102008/harshitha-portfolio',
     status: 'hub',
   },
   {
