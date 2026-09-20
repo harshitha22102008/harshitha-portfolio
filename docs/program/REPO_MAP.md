@@ -90,7 +90,7 @@ Other repos may link back: “See portfolio `docs/program` for stack and design 
 | Folder | Status |
 |---|---|
 | `harshitha-portfolio` | Public repo live; portfolio hub |
-| `studyflow` | Public repo live |
+| `studyflow` | Public repo live; **MVP complete** (`8a6459c`) |
 | `spendwise` | Public repo live |
 | `campushub` | Public repo live |
 | `skillswap` | Public repo live |

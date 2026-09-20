@@ -49,8 +49,9 @@ Build in this order. Each project adds one “new skill layer” she can name in
 
 ### 02 — StudyFlow
 
+**Status:** **MVP complete** — https://github.com/harshitha22102008/studyflow (`8a6459c`). Local demo; no hosted app URL yet.  
 **Role:** Study / productivity tracker with simple charts.  
-**MVP:** Register/login → create subjects → log study sessions (duration, date, subject) → dashboard totals + bar/line chart of hours over time.  
+**MVP:** Register/login → create subjects → log study sessions (duration, date, subject) → dashboard totals + bar/line chart of hours over time + seed data.  
 **New skills:** First full-stack CRUD + JWT + Prisma models + charts.  
 **Cut → Future:** Pomodoro timer, spaced repetition, social leaderboards, calendar sync.
 
