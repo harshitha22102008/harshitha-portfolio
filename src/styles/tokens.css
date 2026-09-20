@@ -1,56 +1,62 @@
 /**
  * Design tokens — Harshitha Portfolio
- * Canonical source per docs/program/DESIGN_SYSTEM.md
+ * Source of truth: docs/program/UI_IDENTITIES.md §1
  *
- * Fonts: Fraunces (display) + Figtree (body)
- * Accent: forest teal — light-first, optional html.dark
+ * Fonts: Fraunces (display) + Manrope (body)
+ * Accent: editorial vermillion #c81e1e — light-first, optional html.dark
  */
 
 :root {
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Figtree", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
 
-  /* Surfaces — cool sage mist (not cream) */
-  --hp-bg: #f4f7f5;
+  /* Surfaces — cool paper, not warm cream */
+  --hp-bg: #f7f5f2;
   --hp-surface: #ffffff;
-  --bg-muted: #e8efe9;
+  --bg-muted: #efece7;
 
-  /* Text */
-  --hp-ink: #14201c;
-  --hp-muted: #5a6b64;
-  --ink-faint: #8b9b94;
+  /* Text — ink */
+  --hp-ink: #121212;
+  --hp-muted: #5c5c5c;
+  --ink-faint: #8a8a8a;
 
-  /* Accent — forest teal */
-  --hp-accent: #1a6b58;
-  --hp-accent-hover: #145546;
-  --hp-accent-soft: #dceee8;
+  /* Accent — editorial vermillion */
+  --hp-accent: #c81e1e;
+  --hp-accent-hover: #9f1515;
+  --hp-accent-soft: #fde8e8;
 
   /* Semantic */
-  --hp-border: #d5e0db;
-  --hp-footer: #0f1a16;
+  --hp-border: #e4e0da;
+  --hp-footer: #121212;
   --danger: #b91c1c;
-  --success: #047857;
-  --warning: #b45309;
+  --success: #166534;
+  --warning: #a16207;
 
   /* Charts */
-  --chart-1: #1a6b58;
-  --chart-2: #1d4ed8;
-  --chart-3: #0369a1;
-  --chart-4: #4b5563;
+  --chart-1: #c81e1e;
+  --chart-2: #121212;
+  --chart-3: #5c5c5c;
+  --chart-4: #8a8a8a;
 
-  --radius: 0.5rem;
-  --radius-sm: 6px;
-  --shadow-soft: 0 1px 2px rgb(20 32 28 / 0.04), 0 8px 24px rgb(20 32 28 / 0.06);
-  --ring: 0 0 0 3px rgb(26 107 88 / 0.35);
+  --radius: 0.25rem;
+  --radius-sm: 4px;
+  --shadow-soft: 0 1px 0 rgb(18 18 18 / 0.06);
+  --ring: 0 0 0 3px rgb(200 30 30 / 0.35);
 
   --bg-atmosphere:
-    radial-gradient(ellipse 80% 50% at 10% -10%, #dceee8 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 0%, #e8efe9 0%, transparent 50%),
-    linear-gradient(180deg, #f4f7f5 0%, #eef2f0 100%);
+    linear-gradient(180deg, #f7f5f2 0%, #efece7 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgb(18 18 18 / 0.03) 24px
+    );
 
-  --nav-h: 4rem;
+  --nav-h: 3.5rem;
+  --nav-h-compact: 3rem;
   --max-w: 68rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -58,8 +64,8 @@
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.75rem;
-  --text-3xl: 2.25rem;
-  --text-hero: clamp(2.25rem, 5vw, 3.25rem);
+  --text-3xl: 2.35rem;
+  --text-hero: clamp(3.25rem, 11vw, 6.5rem);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -67,8 +73,8 @@
   --space-4: 16px;
   --space-5: 24px;
   --space-6: 32px;
-  --space-7: 48px;
-  --space-8: 64px;
+  --space-7: 40px;
+  --space-8: 56px;
 
   --color-bg: var(--hp-bg);
   --color-surface: var(--hp-surface);
@@ -82,30 +88,34 @@
 }
 
 html.dark {
-  --hp-bg: #0f1614;
-  --hp-surface: #1a2420;
-  --bg-muted: #16241f;
-  --hp-ink: #e8eeeb;
-  --hp-muted: #9aaba3;
-  --ink-faint: #6b7c74;
-  --hp-accent: #3dba9a;
-  --hp-accent-hover: #5ecfb0;
-  --hp-accent-soft: #1a332c;
-  --hp-border: #2a3a34;
-  --hp-footer: #0a100e;
-  --ring: 0 0 0 3px rgb(61 186 154 / 0.4);
+  --hp-bg: #121212;
+  --hp-surface: #1c1c1c;
+  --bg-muted: #242424;
+  --hp-ink: #f5f3f0;
+  --hp-muted: #a3a3a3;
+  --ink-faint: #737373;
+  --hp-accent: #ef4444;
+  --hp-accent-hover: #f87171;
+  --hp-accent-soft: #3f1515;
+  --hp-border: #333333;
+  --hp-footer: #0a0a0a;
+  --ring: 0 0 0 3px rgb(239 68 68 / 0.4);
 
   --bg-atmosphere:
-    radial-gradient(ellipse 70% 45% at 0% 0%, #1a332c 0%, transparent 55%),
-    radial-gradient(ellipse 50% 35% at 100% 10%, #16241f 0%, transparent 50%),
-    linear-gradient(180deg, #0f1614 0%, #121a17 100%);
+    linear-gradient(180deg, #121212 0%, #1a1a1a 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgb(255 255 255 / 0.03) 24px
+    );
 
-  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.35);
+  --shadow-soft: 0 1px 0 rgb(0 0 0 / 0.4);
 }
 
 @theme inline {
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Figtree", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
   --color-bg: var(--hp-bg);
   --color-surface: var(--hp-surface);
   --color-ink: var(--hp-ink);

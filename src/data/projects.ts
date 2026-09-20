@@ -67,9 +67,10 @@ export const PROJECTS: Project[] = [
     progression: '06',
     narrative: 'Seed data, scoring rules, progress',
     name: 'CodeQuest',
-    oneLiner: 'Gamified quiz practice with XP and progress.',
+    oneLiner:
+      'MVP: coding tracks, quizzes, and XP progress in a dark HUD-style app.',
     url: 'https://github.com/harshitha22102008/codequest',
-    status: 'planned',
+    status: 'mvp',
   },
   {
     id: 'campuspulse',

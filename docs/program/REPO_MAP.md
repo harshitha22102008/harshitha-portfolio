@@ -94,5 +94,5 @@ Other repos may link back: “See portfolio `docs/program` for stack and design 
 | `spendwise` | Public repo live; **MVP complete** (`dc70624`) |
 | `campushub` | Public repo live |
 | `skillswap` | Public repo live |
-| `codequest` | Public repo live |
+| `codequest` | Public repo live; **MVP complete** (`0491f06`) |
 | `campuspulse` | Public repo live |

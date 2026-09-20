@@ -11,7 +11,7 @@
     min-height: 100vh;
     font-family: var(--font-body);
     font-size: var(--text-base);
-    line-height: 1.6;
+    line-height: 1.55;
     color: var(--color-ink);
     background-color: var(--color-bg);
     background-image: var(--bg-atmosphere);
@@ -25,8 +25,8 @@
   .font-display {
     font-family: var(--font-display);
     font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
     color: var(--color-ink);
   }
 
@@ -41,26 +41,74 @@
   }
 
   ::selection {
-    background: var(--color-accent-soft);
-    color: var(--color-ink);
+    background: var(--color-accent);
+    color: #fff;
   }
 }
 
 @layer utilities {
-  /* Motion 1: hero / section entrance */
   .animate-fade-up {
-    animation: fade-up 220ms var(--ease) both;
+    animation: fade-up 520ms var(--ease-out) both;
+  }
+
+  .animate-fade-up-delayed {
+    animation: fade-up 520ms var(--ease-out) 80ms both;
   }
 
   .animate-fade-in {
-    animation: fade-in 200ms var(--ease) both;
+    animation: fade-in 280ms var(--ease) both;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 500ms var(--ease-out),
+      transform 500ms var(--ease-out);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .btn-press {
+    transition:
+      background-color 150ms var(--ease),
+      color 150ms var(--ease),
+      border-color 150ms var(--ease),
+      transform 120ms var(--ease);
+  }
+
+  .btn-press:active {
+    transform: scale(0.98);
+  }
+
+  .project-row {
+    position: relative;
+  }
+
+  .project-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--color-accent);
+    transition: width 150ms var(--ease);
+  }
+
+  .project-row:hover::before,
+  .project-row:focus-visible::before {
+    width: 3px;
   }
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -83,7 +131,18 @@
   }
 
   .animate-fade-up,
+  .animate-fade-up-delayed,
   .animate-fade-in {
     animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn-press:active {
+    transform: none;
   }
 }
