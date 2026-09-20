@@ -69,7 +69,7 @@ harshitha-portfolio/docs/program/
   README_TEMPLATE.md
   INTERVIEW_PREP.md
   REPO_MAP.md
-  HARSHITA_PERSONA.md
+  HARSHITHA_PERSONA.md
 ```
 
 Other repos may link back: “See portfolio `docs/program` for stack and design system.”
@@ -89,5 +89,5 @@ Other repos may link back: “See portfolio `docs/program` for stack and design 
 
 | Folder | Status |
 |---|---|
-| `harshitha-portfolio` | Exists; placeholder `index.html` only — to be replaced by Vite app |
-| Others | Not created yet |
+| `harshitha-portfolio` | Exists; Vite/React scaffold on disk (commit separately from program docs) |
+| Others | Sibling folders created; scaffolds per QA — see each repo |

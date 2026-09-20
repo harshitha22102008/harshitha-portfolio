@@ -175,4 +175,4 @@ Skip ahead only if a prior MVP is **demo-complete**, not “80% unfinished.”
 - [`REPO_MAP.md`](./REPO_MAP.md) — folder & GitHub names  
 - [`README_TEMPLATE.md`](./README_TEMPLATE.md) — required README  
 - [`INTERVIEW_PREP.md`](./INTERVIEW_PREP.md) — club Q&A outlines  
-- [`HARSHITA_PERSONA.md`](./HARSHITA_PERSONA.md) — editable About stubs  
+- [`HARSHITHA_PERSONA.md`](./HARSHITHA_PERSONA.md) — editable About stubs  
