@@ -1,10 +1,13 @@
+import { Layout } from './components/Layout'
+
 function App() {
   return (
-    <main className="min-h-screen px-6 py-16">
-      <p className="font-[family-name:var(--font-body)] text-[var(--color-muted)]">
-        Harshitha portfolio scaffold — sections coming next.
-      </p>
-    </main>
+    <Layout>
+      {/* Sections land in follow-up commits: hero, about, skills, projects, contact */}
+      <div className="mx-auto max-w-[var(--max-w)] px-5 py-16 sm:px-8">
+        <p className="text-muted">Sections coming next.</p>
+      </div>
+    </Layout>
   )
 }
 
