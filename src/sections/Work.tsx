@@ -10,12 +10,11 @@ export function Work() {
             Selected work
           </p>
           <h2 className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
-            A progression of builds
+            Projects
           </h2>
         </div>
         <p className="max-w-sm text-sm leading-relaxed text-ink-soft sm:text-base">
-          Seven projects — from interfaces to full-stack apps — shipped as
-          separate repos I can walk through in an interview.
+          Things I’ve built so far. Each one lives in its own repo on GitHub.
         </p>
       </div>
 

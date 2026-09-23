@@ -3,27 +3,26 @@ export type SkillGroup = {
   items: string[]
 }
 
-/** Honest beginner–intermediate list — edit as Harshitha learns. */
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    title: 'Comfortable / learning by building',
+    title: 'Using regularly',
     items: [
       'HTML, CSS, Tailwind',
       'JavaScript / TypeScript',
       'React (Vite)',
-      'Node.js, Express (basics)',
-      'REST APIs, JWT auth (basics)',
-      'Prisma + SQLite (basics)',
+      'Node.js, Express',
+      'REST APIs, JWT',
+      'Prisma + SQLite',
       'Git & GitHub',
     ],
   },
   {
-    title: 'Exposed to / next',
+    title: 'Next up',
     items: [
-      'PostgreSQL hosting',
-      'Testing (Vitest / basic API tests)',
+      'PostgreSQL',
+      'Testing',
       'Accessibility',
-      'DSA basics',
+      'DSA',
     ],
   },
 ]

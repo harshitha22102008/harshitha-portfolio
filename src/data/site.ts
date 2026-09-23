@@ -12,11 +12,12 @@ export const NAV_LINKS: NavLink[] = [
 
 export const SITE = {
   name: 'Harshitha',
-  role: 'First-year B.Tech · Full-stack learner',
-  tagline:
-    'I build small, honest web apps — and I can explain every line I ship.',
-  email: 'harshitha@example.com',
+  role: 'B.Tech CSE · SRM',
+  tagline: 'First-year student. I build web apps and learn by actually finishing them.',
+  email: 'harshitha22rajesh@gmail.com',
   github: 'https://github.com/harshitha22102008',
   linkedin: 'https://linkedin.com/in/harshitha',
-  resumePath: '/resume.pdf',
+  branch: 'CSE',
+  college: 'SRM',
+  year: '1st year',
 } as const

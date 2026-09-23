@@ -51,10 +51,10 @@ export function SiteHeader() {
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
           <a
-            href={SITE.resumePath}
+            href="#contact"
             className="hidden rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:inline-flex"
           >
-            Resume
+            Contact me
           </a>
           <button
             type="button"
@@ -101,11 +101,11 @@ export function SiteHeader() {
                 </a>
               ))}
               <a
-                href={SITE.resumePath}
+                href="#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-full bg-ink px-4 py-3 text-center text-sm font-semibold text-paper"
               >
-                Download resume
+                Contact me
               </a>
             </div>
           </motion.nav>

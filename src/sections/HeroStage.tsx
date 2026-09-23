@@ -93,23 +93,10 @@ export function HeroStage() {
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-paper-elevated/60 px-6 py-3 text-sm font-semibold text-ink backdrop-blur-sm transition-all duration-300 hover:border-ink/30 hover:bg-paper-elevated"
             >
-              Contact
+              Contact me
             </a>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-16 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-muted sm:mt-20"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-40" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-signal" />
-          </span>
-          Scroll to explore
-        </motion.div>
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="border-t border-paper/10 bg-ink px-[var(--page-x)] py-8 text-paper/55">
       <div className="max-page flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p>
-          © {year} {SITE.name}. Built with React, Vite & Tailwind.
+          © {year} {SITE.name}
         </p>
         <a
           href="#top"

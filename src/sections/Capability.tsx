@@ -9,11 +9,11 @@ export function Capability() {
           Skills
         </p>
         <h2 className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          Tools I use to ship
+          Skills
         </h2>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          Honest year-one stack — comfortable enough to build with, still
-          sharpening every week.
+          What I’ve actually used in projects, plus a few things I’m picking up
+          next.
         </p>
       </div>
 

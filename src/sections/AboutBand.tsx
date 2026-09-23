@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { SITE } from '../data/site'
 
 export function AboutBand() {
   return (
@@ -17,9 +18,9 @@ export function AboutBand() {
             About
           </p>
           <h2 className="font-display text-4xl leading-tight tracking-tight text-ink sm:text-5xl">
-            Early in the journey.
+            Just getting started,
             <br />
-            <span className="italic text-ink-soft">Serious about the craft.</span>
+            <span className="italic text-ink-soft">and already building.</span>
           </h2>
         </motion.div>
 
@@ -31,14 +32,13 @@ export function AboutBand() {
           className="space-y-6 text-base leading-relaxed text-ink-soft sm:text-lg"
         >
           <p>
-            I’m Harshitha, a first-year B.Tech student learning software by
-            shipping end-to-end projects — React frontends, Express APIs, and
-            Prisma + SQLite data models.
+            I’m Harshitha. I’m in my first year of B.Tech CSE at SRM. Most of
+            what I know about web development comes from making things — React
+            frontends, small Express backends, databases with Prisma.
           </p>
           <p>
-            I’m not trying to look like a senior engineer. I want club leads and
-            mentors to see someone who builds, understands auth flows and data
-            models, and can explain what happens when you click Login.
+            I like projects I can open later and still understand. If something
+            breaks, I want to know why. That’s pretty much how I learn.
           </p>
           <dl className="grid gap-4 border-t border-line pt-6 sm:grid-cols-2">
             <div>
@@ -46,19 +46,17 @@ export function AboutBand() {
                 Education
               </dt>
               <dd className="mt-1 font-medium text-ink">
-                B.Tech · 1st year
+                B.Tech {SITE.branch} · {SITE.year}
                 <br />
-                <span className="font-normal text-ink-soft">
-                  [Branch] · [College]
-                </span>
+                <span className="font-normal text-ink-soft">{SITE.college}</span>
               </dd>
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                Focus now
+                Right now
               </dt>
               <dd className="mt-1 font-medium text-ink">
-                Full-stack web · clear UI · explainable demos
+                Web apps, campus tools, figuring out what sticks
               </dd>
             </div>
           </dl>
