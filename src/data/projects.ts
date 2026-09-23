@@ -1,84 +1,75 @@
 export type Project = {
   id: string
   progression: string
-  /** New skill layer she can name in interviews (PLAN.md). */
   narrative: string
   name: string
   oneLiner: string
-  /** Live sibling GitHub repo URL */
   url: string
   status: 'hub' | 'mvp' | 'planned'
 }
 
-/**
- * Progression 01–07 per docs/program/PLAN.md.
- * Links point at live sibling GitHub repos under harshitha22102008.
- */
 export const PROJECTS: Project[] = [
   {
     id: 'portfolio',
     progression: '01',
-    narrative: 'Layout, responsive UI, routing, deploy',
+    narrative: 'Brand, layout, motion, deployment',
     name: 'Portfolio 2.0',
-    oneLiner: 'Personal hub for my work, skills, and demos.',
+    oneLiner: 'This site — the hub for everything I build and learn.',
     url: 'https://github.com/harshitha22102008/harshitha-portfolio',
     status: 'hub',
   },
   {
     id: 'studyflow',
     progression: '02',
-    narrative: 'First full-stack CRUD + JWT + charts',
+    narrative: 'JWT auth · subjects · sessions · charts',
     name: 'StudyFlow',
-    oneLiner:
-      'MVP: JWT auth, subjects, study sessions, hour charts, and seed data.',
+    oneLiner: 'Track study hours with auth, subjects, sessions, and charts.',
     url: 'https://github.com/harshitha22102008/studyflow',
     status: 'mvp',
   },
   {
     id: 'spendwise',
     progression: '03',
-    narrative: 'Aggregations, CSV import/export',
+    narrative: 'CRUD · categories · CSV · monthly charts',
     name: 'SpendWise',
-    oneLiner:
-      'MVP: auth, categories, income/expense, monthly charts, CSV import/export, and seed.',
+    oneLiner: 'Personal finance tracker with categories, charts, and CSV.',
     url: 'https://github.com/harshitha22102008/spendwise',
     status: 'mvp',
   },
   {
     id: 'campushub',
     progression: '04',
-    narrative: 'Roles, relationships, protected routes',
+    narrative: 'Clubs · events · join flows',
     name: 'CampusHub',
-    oneLiner: 'Clubs and campus events with login and roles.',
+    oneLiner: 'Campus clubs and events with profiles and RSVPs.',
     url: 'https://github.com/harshitha22102008/campushub',
-    status: 'planned',
+    status: 'mvp',
   },
   {
     id: 'skillswap',
     progression: '05',
-    narrative: 'Request workflow (pending → accept/decline)',
+    narrative: 'Marketplace · offer/want · requests',
     name: 'SkillSwap',
-    oneLiner: 'Request and accept peer skill-teaching swaps.',
+    oneLiner: 'Peer skill marketplace with offer/want tags and requests.',
     url: 'https://github.com/harshitha22102008/skillswap',
-    status: 'planned',
+    status: 'mvp',
   },
   {
     id: 'codequest',
     progression: '06',
-    narrative: 'Seed data, scoring rules, progress',
+    narrative: 'Tracks · quizzes · XP · levels',
     name: 'CodeQuest',
-    oneLiner:
-      'MVP: coding tracks, quizzes, and XP progress in a dark HUD-style app.',
+    oneLiner: 'Gamified coding practice with tracks, quizzes, and XP.',
     url: 'https://github.com/harshitha22102008/codequest',
     status: 'mvp',
   },
   {
     id: 'campuspulse',
     progression: '07',
-    narrative: 'Dashboard + explainable rule-based tips',
+    narrative: 'Feed · dashboard · rule-based tips',
     name: 'CampusPulse',
-    oneLiner: 'Campus dashboard with explainable rule-based tips.',
+    oneLiner: 'Campus intelligence feed with explainable recommendations.',
     url: 'https://github.com/harshitha22102008/campuspulse',
-    status: 'planned',
+    status: 'mvp',
   },
 ]

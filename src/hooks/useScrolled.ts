@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 
-export function useScrolled(offset = 24) {
+/** True after the page has scrolled past `threshold` px. */
+export function useScrolled(threshold = 24) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > offset)
-    }
+    const onScroll = () => setScrolled(window.scrollY > threshold)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [offset])
+  }, [threshold])
 
   return scrolled
 }
